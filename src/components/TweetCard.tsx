@@ -1,7 +1,7 @@
 import { UserPicture } from './shared/UserPicture'
 import { IconButton } from './shared/IconButton'
 
-const TEST_USER_PROFILE_URL = 'https://pbs.twimg.com/profile_images/1520583033346269184/SqYY-5kz_400x400.jpg'
+export const TEST_USER_PROFILE_URL = 'https://pbs.twimg.com/profile_images/1520583033346269184/SqYY-5kz_400x400.jpg'
 const TEST_USER_NAME = 'Jose Rodolfo Rojas'
 const TEST_USERNAME = 'jrodolforojas'
 
@@ -21,10 +21,10 @@ export const TweetCard = () => {
         of a page when looking at its layout</p>
         {/* Action Buttons */}
         <div className="flex justify-between mr-2 mt-2">
-          <IconButton prefix='far'icon='comment' />
-          <IconButton prefix='fas'icon='retweet' statLabel={5}/>
-          <IconButton prefix='far'icon='heart' statLabel={10}/>
-          <IconButton prefix='fas'icon='arrow-up-from-bracket' />
+          <IconButton prefix='far'icon='comment' color='#536471'/>
+          <IconButton prefix='fas'icon='retweet' statLabel={5} color='#536471'/>
+          <IconButton prefix='far'icon='heart' statLabel={10} color='#536471'/>
+          <IconButton prefix='fas'icon='arrow-up-from-bracket' color='#536471'/>
         </div>
       </div>
     </div>
