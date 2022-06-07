@@ -1,7 +1,14 @@
+import { TweetCard } from './components/TweetCard'
+
 function App () {
   return (
-    <div className="bg-blue-500">
+    <div>
       <h1 className="text-3xl font-bold underline">Twitter Mirroring</h1>
+      <div className="container mx-auto">
+        <TweetCard/>
+        <TweetCard/>
+        <TweetCard/>
+      </div>
     </div>
   )
 }
