@@ -1,10 +1,9 @@
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconName, IconPrefix, library } from '@fortawesome/fontawesome-svg-core'
-import { faRetweet, faArrowUpFromBracket, faLocationDot, faEarthAmerica } from '@fortawesome/free-solid-svg-icons'
-import { faComment, faHeart, faImage, faChartBar, faFaceSmile, faCalendar } from '@fortawesome/free-regular-svg-icons'
+import { faRetweet, faArrowUpFromBracket, faLocationDot, faEarthAmerica, faHome, faHashtag, faList, faEllipsis } from '@fortawesome/free-solid-svg-icons'
+import { faComment, faHeart, faImage, faChartBar, faFaceSmile, faCalendar, faBell, faEnvelope, faBookmark, faUser } from '@fortawesome/free-regular-svg-icons'
 library.add(faComment, faRetweet, faHeart, faArrowUpFromBracket, faImage, faChartBar, faFaceSmile, faCalendar,
-  faLocationDot, faEarthAmerica)
+  faLocationDot, faEarthAmerica, faHome, faHashtag, faBell, faEnvelope, faBookmark, faList, faUser, faEllipsis)
 
 interface Props{
   icon: IconName
@@ -12,9 +11,20 @@ interface Props{
   statLabel?:number|string
   color?:string
   handleOnClick?: () => void
+  navbarItem?: boolean
 }
-export const IconButton = ({ icon, statLabel, prefix, color = '#1d9bf0', handleOnClick }:Props) => {
+export const IconButton = ({ icon, statLabel, prefix, color = '#1d9bf0', handleOnClick, navbarItem = false }:Props) => {
   return (
-    <button onClick={handleOnClick}><FontAwesomeIcon icon={[prefix, icon]} color={color} className="mr-2"/>{statLabel}</button>
+    <button onClick={handleOnClick}>
+      <div className="flex flex-row items-center justify-center rounded-full mr-3 my-3 px-2">
+        <div className="rounded-full p-1">
+          <FontAwesomeIcon icon={[prefix, icon]} color={color} size={navbarItem ? 'lg' : '1x'}/>
+        </div>
+        { navbarItem
+          ? <span className="ml-2 font-normal text-xl">{statLabel}</span>
+          : <span className="ml-2">{statLabel}</span>
+        }
+      </div>
+    </button>
   )
 }

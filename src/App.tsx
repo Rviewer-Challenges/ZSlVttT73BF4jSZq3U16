@@ -1,12 +1,14 @@
 import { TweetCard } from './components/TweetCard'
 import { CreateTweet } from './components/CreateTweet'
+import { Sidebar } from './components/Sidebar'
 
 function App () {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Twitter Mirroring</h1>
-      <div className="grid grid-cols-1 divide-y">
+    <div className="flex flex-row divide-x">
+      <Sidebar/>
+      <div className="grid grid-cols-1 divide-y mx-10">
         <CreateTweet/>
+        <TweetCard/>
         <TweetCard/>
         <TweetCard/>
         <TweetCard/>
