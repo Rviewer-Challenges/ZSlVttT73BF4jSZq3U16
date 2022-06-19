@@ -4,7 +4,7 @@ import { TEST_USER_PROFILE_URL, TEST_USER_NAME, TEST_USERNAME } from './TweetCar
 
 export const ProfileSidebar = () => {
   return (
-    <div className="flex items-center space-x-2 p-2 bg-green-300 rounded-full justify-center">
+    <div className="flex items-center space-x-2 p-2 rounded-full justify-center">
       <UserPicture url={TEST_USER_PROFILE_URL} heigth={40} width={40}/>
       <div className="flex flex-col">
         <span className="font-semibold">{TEST_USER_NAME}</span>
