@@ -1,14 +1,15 @@
 import { TweetCard } from '../components/TweetCard'
 import { CreateTweet } from '../components/CreateTweet'
+import { Tweet } from '../interfaces/Tweet'
 
-export const Feed = () => {
+interface Props {
+  data: Tweet[];
+}
+export const Feed = ({ data }: Props) => {
   return (
     <div className="grid grid-cols-1 divide-y flex-1">
       <CreateTweet/>
-      <TweetCard/>
-      <TweetCard/>
-      <TweetCard/>
-      <TweetCard/>
+      { data.map((tweet, key) => <TweetCard tweet={tweet} key={key}/>)}
     </div>
   )
 }

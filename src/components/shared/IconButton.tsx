@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconName, IconPrefix, library } from '@fortawesome/fontawesome-svg-core'
-import { faRetweet, faArrowUpFromBracket, faLocationDot, faEarthAmerica, faHome, faHashtag, faList, faEllipsis, faMagnifyingGlass, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faRetweet, faArrowUpFromBracket, faLocationDot, faEarthAmerica, faHome, faHashtag, faList, faEllipsis, faMagnifyingGlass, faStar, faCircleCheck, faGift } from '@fortawesome/free-solid-svg-icons'
 import { faComment, faHeart, faImage, faChartBar, faFaceSmile, faCalendar, faBell, faEnvelope, faBookmark, faUser } from '@fortawesome/free-regular-svg-icons'
 library.add(faComment, faRetweet, faHeart, faArrowUpFromBracket, faImage, faChartBar, faFaceSmile, faCalendar,
-  faLocationDot, faEarthAmerica, faHome, faHashtag, faBell, faEnvelope, faBookmark, faList, faUser, faEllipsis, faMagnifyingGlass, faStar)
+  faLocationDot, faEarthAmerica, faHome, faHashtag, faBell, faEnvelope, faBookmark, faList, faUser, faEllipsis,
+  faMagnifyingGlass, faStar, faCircleCheck, faGift)
 
 interface Props{
   icon: IconName
@@ -22,7 +23,7 @@ export const IconButton = ({ icon, statLabel, prefix, color = '#1d9bf0', handleO
         </div>
         { navbarItem
           ? <span className="ml-2 font-normal text-xl">{statLabel}</span>
-          : <span className="ml-2">{statLabel}</span>
+          : <span className="ml-2 text-sm">{statLabel}</span>
         }
       </div>
     </button>

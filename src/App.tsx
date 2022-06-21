@@ -4,7 +4,7 @@ import { RightSidebar } from './components/RightSidebar'
 
 function App () {
   return (
-    <div className="container mx-auto px-28 flex divide-x">
+    <div className="container mx-auto px-16 flex divide-x justify-center">
       <Sidebar/>
       <Home/>
       <RightSidebar/>
