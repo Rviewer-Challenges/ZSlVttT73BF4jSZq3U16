@@ -18,9 +18,7 @@ export const TrendingCard = ({ category, title, amount }: Props) => {
           <span className="font-semibold">{title}</span>
           <span className="text-xs">{amountFormated.format('0 a')} Tweets</span>
         </div>
-        <button>
-          <FontAwesomeIcon icon={['fas', 'ellipsis']}/>
-        </button>
+        <FontAwesomeIcon icon={['fas', 'ellipsis']}/>
       </div>
     </button>
   )

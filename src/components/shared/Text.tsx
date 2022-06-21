@@ -8,10 +8,10 @@ interface Props {
 export const Text = ({ text }:Props) => {
   const words = text.split(' ')
   return (
-    <div>
+    <p>
       {words.map((word, key) => {
         if (word.match(URL_REGEX)) {
-          return <a key={key} target='_blank' rel='noreferrer' className="text-[#1d9bf0]" href={`https://${word}`}>{word}</a>
+          return <a key={key} target='_blank' rel='noreferrer' className="text-[#1d9bf0]" href={word}>{word}</a>
         }
         if (word.includes('@')) {
           return <span key={key} className="text-[#1d9bf0] mr-1">{word}</span>
@@ -21,6 +21,6 @@ export const Text = ({ text }:Props) => {
         }
         return word + ' '
       })}
-    </div>
+    </p>
   )
 }

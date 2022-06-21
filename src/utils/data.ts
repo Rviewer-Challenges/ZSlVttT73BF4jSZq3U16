@@ -7,7 +7,7 @@ const users:User[] = [
   { id: 3, name: 'Rviewer', username: 'rviewer_', photo: 'https://pbs.twimg.com/profile_images/1504130953983180802/T-2OXy5W_400x400.png', isVerified: false }
 
 ]
-export const data:Tweet[] = [
+export const defaultData:Tweet[] = [
   { tweet: 'Hello World', user: users[0], comments: 0, likes: 100, retweets: 50, date: Date.now(), images: ['https://c.tenor.com/pvFJwncehzIAAAAC/hello-there-private-from-penguins-of-madagascar.gif'] },
   { tweet: 'Follow me as @jrodolforojas', user: users[0], comments: 0, likes: 100, retweets: 50, date: Date.now() },
   { tweet: 'Estoy en directo en twitch.tv/mouredev', user: users[1], comments: 10, likes: 10000, retweets: 100, date: Date.now() },

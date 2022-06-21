@@ -25,7 +25,14 @@ export const CreateTweetActionIcon = ({ type, accept, prefix, icon, requiredMedi
 
   return (
     <button className="rounded-full p-2" onClick={handleClick} disabled={disabled}>
-      {requiredMedia && <input type={type} ref={fileRef} accept={accept} style={{ display: 'none' }} onChange={handleChange}/>}
+      {requiredMedia && (
+        <input
+          type={type}
+          accept={accept}
+          ref={fileRef}
+          onChange={handleChange}
+          style={{ display: 'none' }}
+        />)}
       <FontAwesomeIcon icon={[prefix, icon]} color='#1d9bf0' size='1x'/>
     </button>
   )
