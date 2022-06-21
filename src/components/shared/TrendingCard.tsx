@@ -11,7 +11,7 @@ export const TrendingCard = ({ category, title, amount }: Props) => {
   const amountFormated = numeral(amount)
 
   return (
-    <button className="w-full">
+    <button className="w-80">
       <div className="py-3 px-6 flex justify-between">
         <div className="flex flex-col items-start">
           <span className="text-xs">{category}</span>

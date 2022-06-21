@@ -1,5 +1,5 @@
 
-export const TwitterLogo = (props: any) => {
+export const TwitterOriginal = (props: any) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

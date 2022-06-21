@@ -4,7 +4,7 @@ import { TrendingBar } from './TrendingBar'
 
 export const RightSidebar = () => {
   return (
-    <div className="flex flex-col items-start justify-between">
+    <div className="flex flex-col items-start pl-8">
       <SearchBar/>
       <TrendingBar/>
     </div>
