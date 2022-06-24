@@ -6,7 +6,7 @@ import TwitterProvider from './context/TwitterContext'
 function App () {
   return (
     <TwitterProvider>
-      <div className="container mx-auto px-16 flex divide-x justify-center">
+      <div className="flex justify-center divide-x">
         <Sidebar/>
         <Home/>
         <RightSidebar/>

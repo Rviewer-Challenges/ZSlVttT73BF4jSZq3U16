@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconName, IconPrefix, library } from '@fortawesome/fontawesome-svg-core'
-import { faRetweet, faArrowUpFromBracket, faLocationDot, faEarthAmerica, faHome, faHashtag, faList, faEllipsis, faMagnifyingGlass, faStar, faCircleCheck, faGift } from '@fortawesome/free-solid-svg-icons'
+import { faRetweet, faArrowUpFromBracket, faLocationDot, faEarthAmerica, faHome, faHashtag, faList, faEllipsis, faMagnifyingGlass, faStar, faCircleCheck, faGift, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faComment, faHeart, faImage, faChartBar, faFaceSmile, faCalendar, faBell, faEnvelope, faBookmark, faUser } from '@fortawesome/free-regular-svg-icons'
 library.add(faComment, faRetweet, faHeart, faArrowUpFromBracket, faImage, faChartBar, faFaceSmile, faCalendar,
   faLocationDot, faEarthAmerica, faHome, faHashtag, faBell, faEnvelope, faBookmark, faList, faUser, faEllipsis,
-  faMagnifyingGlass, faStar, faCircleCheck, faGift)
+  faMagnifyingGlass, faStar, faCircleCheck, faGift, faXmark)
 
 interface Props{
   icon: IconName

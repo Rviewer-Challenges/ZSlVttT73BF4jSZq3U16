@@ -32,6 +32,11 @@ const TwitterProvider: React.FC<Props> = ({ children }) => {
     }
   }
 
+  const deleteImageFromMedia = (mediaToDelete: string) => {
+    const newMedia = media.filter(item => item !== mediaToDelete)
+    setMedia(newMedia)
+  }
+
   const clearMediaList = () => {
     setMedia([])
   }
@@ -42,7 +47,7 @@ const TwitterProvider: React.FC<Props> = ({ children }) => {
   }
 
   return (
-    <Context.Provider value={{ data, media, createTweet, uploadMedia, clearMediaList, editTweet }}>
+    <Context.Provider value={{ data, media, createTweet, uploadMedia, clearMediaList, editTweet, deleteImageFromMedia }}>
       {children}
     </Context.Provider>
   )

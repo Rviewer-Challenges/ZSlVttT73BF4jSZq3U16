@@ -3,9 +3,10 @@ import { TextButton } from './shared/TextButton'
 import { defaultUser } from '../utils/data'
 import { CreateTweetActionIcon } from './shared/CreateTweetActionIcon'
 import { useCreateTweet } from '../hooks/useCreateTweet'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const CreateTweet = () => {
-  const { media, register, handleSubmit, onSubmit } = useCreateTweet()
+  const { media, register, handleSubmit, onSubmit, deleteImageFromMedia } = useCreateTweet()
 
   return (
     <div className="flex items-start space-x-6 px-6">
@@ -21,7 +22,11 @@ export const CreateTweet = () => {
             {...register('tweet')}/>
           <div className="container grid grid-cols-2 gap-2 mx-auto mb-2">
             {media.map((item, key) => (
-              <div key={key}>
+              <div key={key} className="relative">
+                <button className="rounded-full bg-black absolute top-1 left-1 px-5 py-3 opacity-75"
+                  onClick={() => deleteImageFromMedia(item)}>
+                  <FontAwesomeIcon icon={['fas', 'xmark']} color='white'/>
+                </button>
                 <img src={item} className="w-full rounded-md col-span-4 row-span-4"/>
               </div>
             ))}

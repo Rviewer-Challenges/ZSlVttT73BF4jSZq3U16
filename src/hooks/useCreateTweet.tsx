@@ -7,7 +7,7 @@ import { Context } from '../context/TwitterContext'
 import { TwitterContext } from '../types/TwitterContext'
 
 export const useCreateTweet = () => {
-  const { createTweet, media, clearMediaList } = useContext(Context) as TwitterContext
+  const { createTweet, media, clearMediaList, deleteImageFromMedia } = useContext(Context) as TwitterContext
 
   const { register, handleSubmit, reset } = useForm<Tweet>({
     resolver: yupResolver(TweetSchema)
@@ -25,6 +25,7 @@ export const useCreateTweet = () => {
     media,
     register,
     handleSubmit,
-    onSubmit
+    onSubmit,
+    deleteImageFromMedia
   }
 }
