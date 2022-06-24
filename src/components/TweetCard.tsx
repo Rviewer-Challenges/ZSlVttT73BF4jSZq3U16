@@ -4,15 +4,46 @@ import { Tweet } from '../interfaces/Tweet'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Text } from './shared/Text'
 import moment from 'moment'
+// import { useStat } from '../hooks/useStat'
+import { useContext, useState } from 'react'
+import { Context } from '../context/TwitterContext'
+import { TwitterContext } from '../types/TwitterContext'
 
 interface Props {
   tweet: Tweet
 }
 
 export const TweetCard = ({ tweet }: Props) => {
-  const { comments, likes, date, retweets, tweet: text, user, images } = tweet
+  const { comments, date, tweet: text, user, images, likes, retweets } = tweet
   const { username, photo, name, isVerified } = user
   const dateFormatted = moment(date).startOf('day').fromNow()
+
+  const { editTweet } = useContext(Context) as TwitterContext
+
+  const [isLikeClicked, setIsLikeClicked] = useState(false)
+  const [isRetweetClicked, setIsRetweetClicked] = useState(false)
+
+  const handleLikes = () => {
+    if (!isLikeClicked) {
+      tweet.likes++
+      setIsLikeClicked(true)
+    } else {
+      tweet.likes--
+      setIsLikeClicked(false)
+    }
+    editTweet(tweet)
+  }
+
+  const handleRetweets = () => {
+    if (!isRetweetClicked) {
+      tweet.retweets++
+      setIsRetweetClicked(true)
+    } else {
+      tweet.retweets--
+      setIsRetweetClicked(false)
+    }
+    editTweet(tweet)
+  }
 
   return (
     <div className="flex items-start space-x-5 px-6 pt-2">
@@ -42,8 +73,8 @@ export const TweetCard = ({ tweet }: Props) => {
         {/* Action Buttons */}
         <div className="flex justify-between mr-2">
           <TweetAction prefix='far'icon='comment'stat={comments}/>
-          <TweetAction prefix='fas'icon='retweet' stat={retweets}/>
-          <TweetAction prefix='far'icon='heart' stat={likes}/>
+          <TweetAction prefix='fas'icon='retweet' stat={retweets} handleOnClick={handleRetweets}/>
+          <TweetAction prefix='far'icon='heart' stat={likes} handleOnClick={handleLikes}/>
           <TweetAction prefix='fas'icon='arrow-up-from-bracket'/>
         </div>
       </div>

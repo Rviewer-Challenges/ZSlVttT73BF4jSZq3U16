@@ -12,11 +12,11 @@ interface Props {
 const TwitterProvider: React.FC<Props> = ({ children }) => {
   const [data, setData] = useState<Tweet[]>(defaultData)
   const [media, setMedia] = useState<string[]>([])
-  console.log('🚀 ~ file: TwitterContext.tsx ~ line 15 ~ media', media)
 
   const createTweet = (tweet:Tweet) => {
     tweet = {
       ...tweet,
+      id: Math.random(),
       user: defaultUser,
       likes: 0,
       retweets: 0,
@@ -36,8 +36,13 @@ const TwitterProvider: React.FC<Props> = ({ children }) => {
     setMedia([])
   }
 
+  const editTweet = (tweet: Tweet) => {
+    const newData = data.map((item) => item.id === tweet.id ? tweet : item)
+    setData(newData)
+  }
+
   return (
-    <Context.Provider value={{ data, media, createTweet, uploadMedia, clearMediaList }}>
+    <Context.Provider value={{ data, media, createTweet, uploadMedia, clearMediaList, editTweet }}>
       {children}
     </Context.Provider>
   )

@@ -6,4 +6,5 @@ export type TwitterContext = {
   createTweet: (tweet: Tweet) => void
   uploadMedia: (media:string) => void
   clearMediaList: () => void
+  editTweet: (tweet:Tweet) => void
 }
