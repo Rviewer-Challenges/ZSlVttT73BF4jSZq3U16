@@ -1,6 +1,8 @@
-import React, { HTMLInputTypeAttribute, useRef } from 'react'
+import React, { HTMLInputTypeAttribute, useContext, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconName, IconPrefix } from '@fortawesome/fontawesome-common-types'
+import { Context } from '../../context/TwitterContext'
+import { TwitterContext } from '../../types/TwitterContext'
 
 interface Props {
   type?: HTMLInputTypeAttribute;
@@ -12,15 +14,16 @@ interface Props {
 }
 
 export const CreateTweetActionIcon = ({ type, accept, prefix, icon, requiredMedia = false, disabled = false }:Props) => {
-  const fileRef = useRef<any>(null)
+  const { uploadMedia } = useContext(Context) as TwitterContext
+  const fileRef = useRef<HTMLInputElement>(null)
 
   const handleChange = (event:any) => {
-    const [file] = event.target.files
-    console.log(file)
+    const file = event.target.files[0] as File
+    uploadMedia(URL.createObjectURL(file))
   }
 
   const handleClick = () => {
-    fileRef.current.click()
+    fileRef?.current?.click()
   }
 
   return (

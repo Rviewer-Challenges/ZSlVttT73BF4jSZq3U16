@@ -4,7 +4,7 @@ import { TwitterOriginal } from './icons/TwitterOriginal'
 
 export const Sidebar = () => {
   return (
-    <div className="flex flex-col justify-between pr-5 max-w-xs h-screen">
+    <div className="flex flex-col justify-between pr-5 w-72 h-screen">
       <div className="flex flex-col items-start">
         <div className="rounded-full p-3">
           <TwitterOriginal width={28} height={28} />

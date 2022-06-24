@@ -27,6 +27,7 @@ module.exports = {
   ],
   rules: {
     'react/react-in-jsx-scope': RULES.OFF,
+    'react/prop-types': RULES.OFF,
     indent: ['error', 2]
   }
 }

@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const TweetCard = ({ tweet }: Props) => {
-  const { comments, likes, date, retweets, tweet: text, user } = tweet
+  const { comments, likes, date, retweets, tweet: text, user, images } = tweet
   const { username, photo, name, isVerified } = user
   const dateFormatted = moment(date).startOf('day').fromNow()
 
@@ -28,8 +28,17 @@ export const TweetCard = ({ tweet }: Props) => {
         {/* hour */}
         <label className="ml-1">· {dateFormatted}</label>
         {/* Text */}
-        {/* <p>{text}</p> */}
         <Text text={text}/>
+        <div className="container grid grid-cols-2 gap-2 mx-auto mb-2">
+          {
+            images?.map((image, key) => (
+              <div key={key} >
+                <img src={image}className="w-full rounded-md col-span-2 row-span-2"/>
+              </div>
+            ))
+          }
+        </div>
+
         {/* Action Buttons */}
         <div className="flex justify-between mr-2">
           <TweetAction prefix='far'icon='comment'stat={comments}/>
