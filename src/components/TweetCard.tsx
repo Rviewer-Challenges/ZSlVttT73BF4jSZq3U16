@@ -4,7 +4,6 @@ import { Tweet } from '../interfaces/Tweet'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Text } from './shared/Text'
 import moment from 'moment'
-// import { useStat } from '../hooks/useStat'
 import { useContext, useState } from 'react'
 import { Context } from '../context/TwitterContext'
 import { TwitterContext } from '../types/TwitterContext'
@@ -46,8 +45,8 @@ export const TweetCard = ({ tweet }: Props) => {
   }
 
   return (
-    <div className="flex items-start space-x-5 px-6 pt-2">
-      <div>
+    <div className="flex flex-1 items-start space-x-5 px-6 pt-2">
+      <div className="w-14 h-14">
         <UserPicture url={photo} width={60} heigth={60}/>
       </div>
       <div className="flex-1">

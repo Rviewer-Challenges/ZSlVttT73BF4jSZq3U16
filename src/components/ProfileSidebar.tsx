@@ -1,16 +1,17 @@
-import { IconButton } from './shared/IconButton'
-import { UserPicture } from './shared/UserPicture'
 import { defaultUser } from '../utils/data'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const ProfileSidebar = () => {
   return (
-    <div className="flex items-center space-x-2 p-2 rounded-full justify-center">
-      <UserPicture url={defaultUser.photo} heigth={40} width={40}/>
-      <div className="flex flex-col">
-        <span className="font-semibold">{defaultUser.name}</span>
-        <span>@{defaultUser.username}</span>
+    <div className="flex flex-row justify-center rounded-full w-full mb-2 items-center ml-2">
+      <img src={defaultUser.photo} className="rounded-full h-10 w-10"/>
+      <div className="flex flex-1 flex-col xl:ml-2">
+        <span className="hidden xl:block font-semibold">{defaultUser.name}</span>
+        <span className="hidden xl:block">@{defaultUser.username}</span>
       </div>
-      <IconButton icon='ellipsis' prefix='fas' color='#0f1419'/>
+      <div className="invisible xl:visible lg:mr-2">
+        <FontAwesomeIcon icon={['fas', 'ellipsis']} color='#0f1419'/>
+      </div>
     </div>
   )
 }

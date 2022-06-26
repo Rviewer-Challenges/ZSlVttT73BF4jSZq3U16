@@ -6,7 +6,7 @@ interface Props {
 }
 export const Feed = ({ data }: Props) => {
   return (
-    <div className="grid grid-cols-1 divide-y flex-1">
+    <div className="flex flex-1 flex-col divide-y">
       { data.map((tweet, key) => <TweetCard tweet={tweet} key={key}/>)}
     </div>
   )
