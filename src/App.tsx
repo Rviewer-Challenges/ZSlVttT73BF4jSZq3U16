@@ -1,5 +1,5 @@
 import { Sidebar } from './components/Sidebar'
-import { Home } from './pages/Home'
+import { Navigator } from './navigator/Navigator'
 import { RightSidebar } from './components/RightSidebar'
 import TwitterProvider from './context/TwitterContext'
 
@@ -8,7 +8,8 @@ function App () {
     <TwitterProvider>
       <div className="flex justify-center divide-x">
         <Sidebar/>
-        <Home/>
+        {/* <Home/> */}
+        <Navigator/>
         <RightSidebar/>
       </div>
     </TwitterProvider>

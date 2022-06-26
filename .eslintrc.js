@@ -28,6 +28,7 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': RULES.OFF,
     'react/prop-types': RULES.OFF,
+    'no-undef': RULES.OFF,
     indent: ['error', 2]
   }
 }
