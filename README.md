@@ -2,6 +2,9 @@
 
 ## Demo
 [Twitter Mirroring Demo](https://jrodolforojas.github.io/twitter-mirroring/)
+## Using
+[![React](https://img.shields.io/badge/React-57b9d3?style=for-the-badge&logo=react&logoColor=white&labelColor=101010)]()
+[![TypeScript](https://img.shields.io/badge/TypeScript-57b9d3?style=for-the-badge&logo=typescript&logoColor=white&labelColor=101010)]()
 ## Screenshots
 ### Twitter Mirroring full width
 ![Twitter full width](images/full-width.png)
