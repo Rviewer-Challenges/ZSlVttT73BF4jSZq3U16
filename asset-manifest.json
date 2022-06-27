@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/twitter-mirroring/static/css/main.00b5833a.css",
+    "main.js": "/twitter-mirroring/static/js/main.ba9f4b5b.js",
+    "index.html": "/twitter-mirroring/index.html",
+    "main.00b5833a.css.map": "/twitter-mirroring/static/css/main.00b5833a.css.map",
+    "main.ba9f4b5b.js.map": "/twitter-mirroring/static/js/main.ba9f4b5b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00b5833a.css",
+    "static/js/main.ba9f4b5b.js"
+  ]
+}
