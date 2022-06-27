@@ -3,7 +3,7 @@ import { User } from '../interfaces/User'
 
 const users:User[] = [
   { id: 1, name: 'Jose Rodolfo Rojas', username: 'jrodolforojas', photo: 'https://pbs.twimg.com/profile_images/1520583033346269184/SqYY-5kz_400x400.jpg', isVerified: false },
-  { id: 2, name: 'Brais Moure', username: 'mouredev', photo: 'https://pbs.twimg.com/profile_images/1538973859902373888/mHUxStmy_400x400.jpg', isVerified: true },
+  { id: 2, name: 'Brais Moure', username: 'mouredev', photo: 'https://pbs.twimg.com/profile_images/1541512048424665090/zz6jA1mM_400x400.jpg', isVerified: true },
   { id: 3, name: 'Rviewer', username: 'rviewer_', photo: 'https://pbs.twimg.com/profile_images/1504130953983180802/T-2OXy5W_400x400.png', isVerified: false },
   { id: 4, name: 'Peter Parker', username: 'spiderman', photo: 'https://i.pinimg.com/originals/cc/35/13/cc35139a1e84ce860f2c627e1d6c232c.png', isVerified: true }
 
