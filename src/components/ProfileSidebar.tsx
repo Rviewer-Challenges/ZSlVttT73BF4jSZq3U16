@@ -8,7 +8,7 @@ export const ProfileSidebar = () => {
       <div className="flex flex-1 flex-col xl:ml-2">
         <div className="flex flex-row items-start">
           <span className="hidden xl:block font-semibold">{defaultUser.name}</span>
-          {defaultUser.isVerified && <FontAwesomeIcon className="ml-1 mt-1" icon={['fas', 'circle-check']} color='#1d9bf0'/>}
+          {defaultUser.isVerified && <FontAwesomeIcon className="ml-1 mt-1 hidden xl:block" icon={['fas', 'circle-check']} color='#1d9bf0'/>}
         </div>
         <span className="hidden xl:block">@{defaultUser.username}</span>
       </div>

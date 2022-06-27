@@ -13,7 +13,7 @@ export const ComingSoon = () => {
         <SocialLink icon='github' prefix='fab' link='https://github.com/jrodolforojas'/>
         <SocialLink icon='instagram' prefix='fab' link='https://www.instagram.com/jrodolforojas/'/>
         <SocialLink icon='twitter' prefix='fab' link='https://twitter.com/jrodolforojas'/>
-        <SocialLink icon='link' prefix='fas' link='https://www.linkedin.com/in/jrodolforojas/'/>
+        <SocialLink icon='link' prefix='fas' link='https://jrodolforojas.com/'/>
       </div>
     </div>
   )
